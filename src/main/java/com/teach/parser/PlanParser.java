@@ -85,6 +85,7 @@ public class PlanParser {
         while (!StringUtil.in(type, "1", "2", "3", "4")) {
             System.out.println("输错了只能输入 1-4，:) ");
             System.out.println("1.大班           2.中班           3.小班     4.托班 \n");
+            System.out.println("请输入:");
             type = sc.next();
         }
         if (type.equals("1")) {
