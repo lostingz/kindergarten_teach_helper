@@ -18,7 +18,7 @@ import com.teach.parser.PlanParser;
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("================================幼儿园管理系统================================\n");
+        System.out.println("================================幼儿园文件助手================================\n");
         System.out.println("选择系统（键盘输入对应得数字，回车即可）\n");
         System.out.println("1.教案生成系统           2.课件生成系统      3.图片下载系统\n");
         System.out.println("请输入:");

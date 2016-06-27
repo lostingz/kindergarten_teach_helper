@@ -4,7 +4,6 @@
  */
 package com.teach.model;
 
-import com.teach.type.ClassType;
 
 /**
  * @author zhenggm<a href="mailto:zhenggm@chsi.com.cn">zhenggm</a>
@@ -12,30 +11,42 @@ import com.teach.type.ClassType;
  */
 public class ResourceModel {
     private String url;
-    private String text;
-    private ClassType classType;
+    private String title;
+    private String datetime;
+
+    public ResourceModel(String url, String title) {
+        super();
+        this.url = url;
+        this.title = title;
+    }
+
+    public ResourceModel(String url, String title, String datetime) {
+        super();
+        this.url = url;
+        this.title = title;
+        this.datetime = datetime;
+    }
 
     public String getUrl() {
         return url;
     }
-
     public void setUrl(String url) {
         this.url = url;
     }
 
-    public String getText() {
-        return text;
+    public String getTitle() {
+        return title;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public ClassType getClassType() {
-        return classType;
+    public String getDatetime() {
+        return datetime;
     }
 
-    public void setClassType(ClassType classType) {
-        this.classType = classType;
+    public void setDatetime(String datetime) {
+        this.datetime = datetime;
     }
 }

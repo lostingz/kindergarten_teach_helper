@@ -23,4 +23,13 @@ public enum ClassType {
     public String getName() {
         return name;
     }
+
+    public static ClassType getClassTypeByOrdinal(int ordinal) {
+        for (ClassType type : ClassType.values()) {
+            if (type.ordinal() == ordinal) {
+                return type;
+            }
+        }
+        return ClassType.BIG;
+    }
 }
