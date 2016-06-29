@@ -27,7 +27,6 @@ import com.lowagie.text.Paragraph;
 import com.lowagie.text.html.simpleparser.HTMLWorker;
 import com.lowagie.text.html.simpleparser.StyleSheet;
 import com.lowagie.text.rtf.RtfWriter2;
-import com.teach.config.FileCofig;
 import com.teach.config.ResourceURL;
 
 /**
@@ -35,18 +34,18 @@ import com.teach.config.ResourceURL;
  * @version $Id$
  */
 public class WordUtil {
-    public static void convertToWord(String html, String title, String type) {
+    public static void convertToWord(String html, String title, String type, String FilePath) {
         OutputStream out = null;
         try {
             String subFolder = "";
             if (StringUtils.isNotBlank(type)) {
                 subFolder = type + "/";
             }
-            File dir = new File(FileCofig.PLAN + subFolder);
+            File dir = new File(FilePath + subFolder);
             if (!dir.exists()) {
                 dir.mkdirs();
             }
-            File f = new File(FileCofig.PLAN + subFolder + "/" + title + ".doc");
+            File f = new File(FilePath + subFolder + "/" + title + ".doc");
             if (!f.exists()) {
                 f.createNewFile();
             }

@@ -11,5 +11,4 @@ package com.baidu.config;
 public class BaiduConstants {
     public final static String URL = "http://image.baidu.com/search/acjson" + "?tn=resultjson_com&ipn=rj&is=&fp=result"
             + "&cl=2&lm=-1&ie=utf-8&oe=utf-8&adpicid=&st=-1&z=&ic=0";
-    public final static String IMG_PATH = "D:/图片/";
 }

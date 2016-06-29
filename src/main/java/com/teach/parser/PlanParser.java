@@ -43,7 +43,6 @@ public class PlanParser {
                 for (int i = 1; i <= totalPage; i++) {
                     getItemUrl(baseUrl + i + ".htm");
                 }
-                // requestQueue.setComplete(true);
             } catch (IOException e) {
                 System.out.println("获取列表失败");
             }

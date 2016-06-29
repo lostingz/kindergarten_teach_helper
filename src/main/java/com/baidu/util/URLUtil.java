@@ -19,6 +19,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClients;
 
 import com.baidu.config.BaiduConstants;
+import com.teach.config.FileCofig;
 
 /**
  * @author zhenggm<a href="mailto:zhenggm@chsi.com.cn">zhenggm</a>
@@ -73,11 +74,11 @@ public class URLUtil {
             InputStream in = entity.getContent();
             byte[] b = new byte[1024];
             int len = 0;
-            File folder = new File(BaiduConstants.IMG_PATH + keyword.trim() + "/");
+            File folder = new File(FileCofig.IMG_PATH + keyword.trim() + "/");
             if (!folder.exists()) {
                 folder.mkdirs();
             }
-            OutputStream out = new FileOutputStream(BaiduConstants.IMG_PATH + keyword.trim() + "/"
+            OutputStream out = new FileOutputStream(FileCofig.IMG_PATH + keyword.trim() + "/"
                     + System.currentTimeMillis() + ".jpg");
             while ((len = in.read(b)) != -1) {
                 out.write(b, 0, len);

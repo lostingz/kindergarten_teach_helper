@@ -1,6 +1,6 @@
 /**
  * Chsi
- * Created on 2016年6月7日
+ * Created on 2016年6月29日
  */
 package com.teach.parser;
 
@@ -17,11 +17,10 @@ import com.teach.tool.WordUtil;
  * @author zhenggm<a href="mailto:zhenggm@chsi.com.cn">zhenggm</a>
  * @version $Id$
  */
-public class PlanGenerator implements Runnable {
-
+public class BookReviewGenerator implements Runnable {
     private RequestQueue requestQueue;
 
-    public PlanGenerator(RequestQueue requestQueue) {
+    public BookReviewGenerator(RequestQueue requestQueue) {
         super();
         this.requestQueue = requestQueue;
     }
@@ -43,10 +42,11 @@ public class PlanGenerator implements Runnable {
         Document doc;
         try {
             doc = HtmlTool.getDocument(url);
-            String title = doc.select(".art_top h2").text();
-            String html = doc.select(".art_mid .nr").html();
-            String type = requestQueue.getClassType().getName() + "教案/" + requestQueue.getPlanType().getName();
-            WordUtil.convertToWord(html, title, type, FileCofig.PLAN);
+            String title = doc.select(".maincontainer .entry strong").text();
+            String html = doc.select("#content .content").html();
+            System.out.println(title);
+            String type = requestQueue.getBookReviewType().getTitle() + "读后感/";
+            WordUtil.convertToWord(html, title, type, FileCofig.BOOKERVIEW);
         } catch (IOException e) {
             System.out.println("获取详情页面失败");
         }

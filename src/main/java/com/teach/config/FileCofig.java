@@ -11,4 +11,6 @@ package com.teach.config;
 public class FileCofig {
     public static final String PLAN = "D:/教案/";
     public static final String KEJIAN = "D:/课件/";
+    public static final String BOOKERVIEW = "D:/读后感/";
+    public final static String IMG_PATH = "D:/图片/";
 }

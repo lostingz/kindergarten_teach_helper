@@ -7,6 +7,7 @@ package com.teach.queue;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+import com.teach.type.BookReviewType;
 import com.teach.type.ClassType;
 import com.teach.type.CoursewareType;
 import com.teach.type.PlanType;
@@ -21,6 +22,7 @@ public class RequestQueue {
     private ClassType classType;
     private PlanType planType;
     private CoursewareType coursewareType;
+    private BookReviewType bookReviewType;
 
     public synchronized String getRequest() {
         while (queue.size() == 0) {
@@ -68,5 +70,13 @@ public class RequestQueue {
 
     public void setCoursewareType(CoursewareType coursewareType) {
         this.coursewareType = coursewareType;
+    }
+
+    public BookReviewType getBookReviewType() {
+        return bookReviewType;
+    }
+
+    public void setBookReviewType(BookReviewType bookReviewType) {
+        this.bookReviewType = bookReviewType;
     }
 }

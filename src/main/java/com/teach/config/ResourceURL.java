@@ -12,4 +12,5 @@ public class ResourceURL {
     public static final String BASE = "http://www.yejs.com.cn/";
     public static final String PLAN = BASE + "jiaoan/listMM/id/";
     public static final String COURSEWARE = BASE + "yekj/courseware/id/";
+    public static final String BOOKREVIEWBASE = "http://www.copyright8.com/";
 }
