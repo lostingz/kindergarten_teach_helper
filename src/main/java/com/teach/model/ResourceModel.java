@@ -4,7 +4,6 @@
  */
 package com.teach.model;
 
-
 /**
  * @author zhenggm<a href="mailto:zhenggm@chsi.com.cn">zhenggm</a>
  * @version $Id$
@@ -13,6 +12,9 @@ public class ResourceModel {
     private String url;
     private String title;
     private String datetime;
+
+    public ResourceModel() {
+    }
 
     public ResourceModel(String url, String title) {
         super();
@@ -30,6 +32,7 @@ public class ResourceModel {
     public String getUrl() {
         return url;
     }
+
     public void setUrl(String url) {
         this.url = url;
     }
