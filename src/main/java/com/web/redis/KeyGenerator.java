@@ -4,8 +4,6 @@
  */
 package com.web.redis;
 
-
-
 /**
  * @author zhenggm<a href="mailto:zhenggm@chsi.com.cn">zhenggm</a>
  * @version $Id$

@@ -27,11 +27,11 @@ import com.web.plan.service.PlanService;
 public class PlanController {
 
     @Autowired
-    private PlanService planService;
+    private PlanService planCacheService;
 
     @RequestMapping(value = "/list")
     @ResponseBody
     public List<ResourceModel> getPlan(Integer c, Integer pt) {
-        return planService.getUrlTaskList(ClassType.getClassTypeByOrdinal(c), PlanType.getPlanTypeByOrdinal(pt));
+        return planCacheService.getUrlTaskList(ClassType.getClassTypeByOrdinal(c), PlanType.getPlanTypeByOrdinal(pt));
     }
 }
