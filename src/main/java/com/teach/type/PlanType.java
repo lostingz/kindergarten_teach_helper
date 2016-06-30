@@ -85,8 +85,4 @@ public enum PlanType {
         }
         return PlanType.ART;
     }
-
-    public static void main(String[] args) {
-        getPlanNames();
-    }
 }

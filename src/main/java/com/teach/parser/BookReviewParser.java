@@ -91,8 +91,4 @@ public class BookReviewParser {
             parse();
         }
     }
-
-    public static void main(String[] args) {
-        parse();
-    }
 }
